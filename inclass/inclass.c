@@ -4,23 +4,35 @@
  *  Created on: 2019年2月14日
  *      Author: 111111
  */
-
 #include <stdio.h>
+int A,B;
 
-
-main()
-
+int fun(){
+	static int count = 0;
+	count++;
+	return count;
+}
+int Add()
+{
+	return A+B;
+}
+int main()
 {
 
-   int a , b;
+    int answer; // Local variable
 
+    A = 5;
 
-   a = 10;
+    B = 7;
 
-   printf( "Value of b is %d\n", (a == 1) ? 20: 30 );
+    answer = Add();
 
+    printf("%d\n",answer);
 
-   printf( "Value of b is %d\n", (a == 10) ? 20: 30 );
+    printf("%d ", fun());
+
+    printf("%d ", fun());
+
+    return 0;
 
 }
-
