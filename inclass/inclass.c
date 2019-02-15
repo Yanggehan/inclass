@@ -1,25 +1,21 @@
-#include <stdio.h>  //standard input output built into c library
+#include <stdio.h>
+
+int main( ) {
 
 
-typedef int number;
+   char str[100];       //char array STRING used as buffer
 
-
-
- int main() {
-
-
-   number c;
 
    printf( "Enter a value :");
 
    fflush(stdout);  //ECLIPSE BUG
 
-   c = getchar( );
+   gets( str );
 
 
    printf( "\nYou entered: ");
 
-   putchar( c );
+   puts( str );
 
 
    return 0;
