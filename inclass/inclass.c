@@ -1,35 +1,53 @@
 #include <stdio.h>
 
-
-
 int main () {
 
-   int n[ 10 ]; /* n is an array of 10 integers */
 
-   int i,j;
+   int  var = 20;
 
+   int x = 10;
 
-
-   /* initialize elements of array n to 0 */
-
-   for ( i = 0; i < 10; i++ ) {
-
-      n[ i ] = i + 100; /* set element at location i to i + 100 */
-
-   }
+   int  *ip;        /* pointer variable declaration */
 
 
 
-   /* output each array element's value */
-
-   for (j = 0; j < 10; j++ ) {
-
-      printf("Element[%d] = %d\n", j, n[j] );
-
-   }
+   ip = NULL; // Point to address 0 for safety
 
 
+   ip = &var;  /* Change where you point to. Now pointing to address of var */
+
+
+
+   x = x + *ip; // x = 10 + 20. grabbing data where pointer is pointing is called dereferencing the pointer
+
+
+
+   ip = &x; //CHANGE WHERE ip points --> point to address of x
+
+
+
+   //showing pointer calculation
+
+   ip = ip + 3;  // address of ip + (3 * sizeof(int)) = address of ip + 12
+
+
+   printf("Address of var variable: %x\n", &var  );
+
+
+
+   /* address stored in pointer variable */
+
+   printf("Address stored in ip variable: %x\n", ip );
+
+
+   /* access the value using the pointer */
+
+   printf("Value of *ip variable: %d\n", *ip );
 
    return 0;
 
 }
+
+
+
+//STRUCT
