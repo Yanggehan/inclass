@@ -8,53 +8,19 @@
 #include <stdio.h>
 
 
+main()
 
-int main () {
+{
 
-   /* local variable definition */
-
-   char grade = 'B';
-
-   switch(grade) {
-
-      case 'A' :
-
-         printf("Excellent!\n" );
-
-         break;
-
-      case 'B' :
-
-      case 'C' :
-
-         printf("Well done\n" );
-
-         break;
-
-      case 'D' :
-
-         printf("You passed\n" );
-
-         break;
-
-      case 'F' :
-
-         printf("Better try again\n" );
-
-         break;
-
-      default :
-
-         printf("Invalid grade\n" );
-
-   }
+   int a , b;
 
 
+   a = 10;
 
-   printf("Your grade is  %c\n", grade );
+   printf( "Value of b is %d\n", (a == 1) ? 20: 30 );
 
 
-
-   return 0;
+   printf( "Value of b is %d\n", (a == 10) ? 20: 30 );
 
 }
+
