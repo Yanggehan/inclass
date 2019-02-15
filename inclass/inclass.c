@@ -2,20 +2,34 @@
 
 
 
-int main() {
-
-   FILE *fp;        //pointer to a file type
+void main() {
 
 
+   FILE *fp;
 
-   fp = fopen("textFile.txt", "w+");
+   char buff[255];
 
-   fprintf(fp, "This is testing for fprintf...\n");
 
-   fputs("This is testing for fputs...\n", fp);
+
+   fp = fopen("textFile.txt", "r");
+
+   fscanf(fp, "%s", buff);
+
+   printf("1 : %s\n", buff );
+
+
+
+   fgets(buff, 255, (FILE*)fp);
+
+   printf("2: %s\n", buff );
+
+
+   fgets(buff, 255, (FILE*)fp);
+
+   printf("3: %s\n", buff );
 
    fclose(fp);
 
-   return 0;
+
 
 }
