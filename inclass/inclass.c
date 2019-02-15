@@ -1,44 +1,29 @@
 #include <stdio.h>
+void swap(int *x, int*y)
+{
+	int z = *x;
+	*x = *y;
+	*y = z;
+}
+int main()
 
-#include <string.h>
+{
 
+    int a = 45, b = 35;
 
+    printf("Before Swap\n");
 
-union Data {
-
-   int i;
-
-   float f;
-
-   char str[20];
-
-};
-
-
-
-int main( ) {
+    printf("a = %d b = %d\n",a,b);
 
 
-   union Data data;
-
-
-   data.i = 10;
-
-   printf( "data.i : %d\n", data.i);
+    swap(&a, &b);
 
 
 
-   data.f = 220.5;
+    printf("After Swap with pass by reference\n");
 
-   printf( "data.f : %f\n", data.f);
+    printf("a = %d b = %d\n",a,b);
 
-
-
-   strcpy( data.str, "C Programming");
-
-   printf( "data.str : %s\n", data.str);
-
-
-   return 0;
+    return 0;
 
 }
