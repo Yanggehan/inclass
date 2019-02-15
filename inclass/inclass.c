@@ -1,38 +1,35 @@
-/*
- * inclass.c
- *
- *  Created on: 2019年2月14日
- *      Author: 111111
- */
 #include <stdio.h>
-int A,B;
 
-int fun(){
-	static int count = 0;
-	count++;
-	return count;
-}
-int Add()
-{
-	return A+B;
-}
-int main()
-{
 
-    int answer; // Local variable
 
-    A = 5;
+int main () {
 
-    B = 7;
+   int n[ 10 ]; /* n is an array of 10 integers */
 
-    answer = Add();
+   int i,j;
 
-    printf("%d\n",answer);
 
-    printf("%d ", fun());
 
-    printf("%d ", fun());
+   /* initialize elements of array n to 0 */
 
-    return 0;
+   for ( i = 0; i < 10; i++ ) {
+
+      n[ i ] = i + 100; /* set element at location i to i + 100 */
+
+   }
+
+
+
+   /* output each array element's value */
+
+   for (j = 0; j < 10; j++ ) {
+
+      printf("Element[%d] = %d\n", j, n[j] );
+
+   }
+
+
+
+   return 0;
 
 }
