@@ -6,40 +6,55 @@
  */
 
 #include <stdio.h>
+
+
+
 int main () {
+
    /* local variable definition */
-int a = 100;
 
- /* check the boolean condition */
+   char grade = 'B';
 
-   if( a == 10 ) {
+   switch(grade) {
 
-      /* if condition is true then print the following */
+      case 'A' :
 
-      printf("Value of a is 10\n" );
+         printf("Excellent!\n" );
 
-   } else if( a == 20 ) {
+         break;
 
-      /* if else if condition is true */
+      case 'B' :
 
-      printf("Value of a is 20\n" );
+      case 'C' :
 
-   } else if( a == 30 ) {
+         printf("Well done\n" );
 
-      /* if else if condition is true  */
+         break;
 
-      printf("Value of a is 30\n" );
+      case 'D' :
 
-   } else {
+         printf("You passed\n" );
 
-      /* if none of the conditions is true */
+         break;
 
-      printf("None of the values is matching\n" );
+      case 'F' :
+
+         printf("Better try again\n" );
+
+         break;
+
+      default :
+
+         printf("Invalid grade\n" );
 
    }
 
 
 
-   printf("Exact value of a is: %d\n", a );
+   printf("Your grade is  %c\n", grade );
+
+
+
    return 0;
+
 }
