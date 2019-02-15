@@ -1,24 +1,20 @@
 #include <stdio.h>
 
-int main( ) {
 
 
-   char str[100];
+int main() {
 
-   int i;
-
-
-
-   printf( "Enter a value :");
-
-   fflush(stdout);  //ECLIPSE BUG
-
-   scanf("%s %d", str, &i);
+   FILE *fp;        //pointer to a file type
 
 
-   printf( "\nYou entered: %s %d ", str, i);
 
+   fp = fopen("textFile.txt", "w+");
 
+   fprintf(fp, "This is testing for fprintf...\n");
+
+   fputs("This is testing for fputs...\n", fp);
+
+   fclose(fp);
 
    return 0;
 
