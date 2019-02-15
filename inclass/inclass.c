@@ -3,19 +3,21 @@
 int main( ) {
 
 
-   char str[100];       //char array STRING used as buffer
+   char str[100];
+
+   int i;
+
 
 
    printf( "Enter a value :");
 
    fflush(stdout);  //ECLIPSE BUG
 
-   gets( str );
+   scanf("%s %d", str, &i);
 
 
-   printf( "\nYou entered: ");
+   printf( "\nYou entered: %s %d ", str, i);
 
-   puts( str );
 
 
    return 0;
